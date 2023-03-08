@@ -1,0 +1,184 @@
+---
+import { Image } from '@astrojs/image/components';
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon';
+
+const imageUrl = 'https://avatars.githubusercontent.com/u/78104102?v=4';
+---
+
+<Layout title="Douglas Maia">
+	<div class="container">
+		<section id="sobre">
+			<h1>Sobre Mim</h1>
+	
+			<hr>
+
+			<div>
+				<p>
+					Me chamo <strong>Douglas Maia</strong>, tenho <strong>18 anos</strong>, sou um <strong>desenvolvedor WEB</strong>, técnico em TI. Tenho como objetivo avançar na carreira de desenvolvimento, onde procuro me formar como <strong>Cientista da Computação</strong>.
+				</p>
+	
+				<Image src={imageUrl} width={250} aspectRatio={1/1} format="jpeg" alt="Douglas Maia" />
+			</div>
+		</section>
+
+		<section id="conhecimentos">
+			<h1>Conhecimentos</h1>
+
+			<hr>
+
+			<div class="grid-container">
+				<div class="formacoes-container">
+					<h2>Formações</h2>
+
+					<hr>
+	
+					<ul>
+						<li>MSI - IFSC Canoinhas</li>
+						<li>Inglês Básico - IFSC Canoinhas</li>
+						<li>Python Mundo 1 & 2 - Curso em Vídeo</li>
+						<li>JavaScript Básico - Trybe</li>
+						<li>Des. Full Stack - <strong>Trybe [Cursando]</strong></li>
+					</ul>
+				</div>
+	
+				<div class="conhecimentos-container">
+					<h2>Tecnologias</h2>
+
+					<hr>
+	
+					<ul>
+						<li>HTML 5</li>
+						<li>CSS 3</li>
+						<li>JavaScript</li>
+						<li>Vue JS</li>
+						<li>Astro JS</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section id="portifolio">
+			<h1>Portifólio</h1>
+
+			<hr>
+
+			<Icon pack="ph" name="circle-notch" class="spin" />
+
+			<h1>Em construção</h1>
+		</section>
+
+		<section id="contato">
+			<h1>Contato</h1>
+
+			<hr>
+
+			<div class="contato-container">
+				<a
+					href="https://github.com/Douglasmai4"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Icon pack="ph" name="github-logo" class="icon" />
+				</a>
+
+				<a
+					href="https://instagram.com/douglasmai4"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Icon pack="ph" name="instagram-logo" class="icon" />
+				</a>
+
+				<a
+					href="https://tel.me/Douglas_Maia"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Icon pack="ph" name="telegram-logo" class="icon" />
+				</a>
+
+				<a
+					href="https://linkedin.com"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Icon pack="ph" name="linkedin-logo" class="icon" />
+				</a>
+
+				<a
+					href="mailto:douglasmai4@protonmail.com"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Icon pack="ph" name="envelope" class="icon" />
+				</a>
+			</div>
+		</section>
+	</div>
+</Layout>
+
+<style lang="sass">
+	@import '../assets/_colors.sass'
+
+	#sobre div
+		display: flex
+		justify-content: center
+		align-items: center
+		gap: 2rem
+
+		img
+			border-radius: 1rem
+			box-shadow: 0 0 15px rgba(0, 0, 0, .5)
+
+	#conhecimentos
+		.grid-container
+			display: grid
+			grid-template-columns: 1fr 1fr
+			gap: 1rem
+
+			div
+				border: 1px solid $c-primary
+				border-radius: 1rem
+				padding: .5rem
+				box-shadow: 0 0 15px rgba(0, 0, 0, .5)
+
+				&:last-child
+					border-color: $c-second
+
+				ul
+					list-style-type: none
+
+	#portifolio
+		.spin
+			width: 5rem
+			animation: spin 1s infinite
+
+	#contato
+		a
+			color: $c-text
+			text-decoration: none
+			border-radius: 50%
+			transition: color .1s ease-in
+
+			&:hover
+				color: $c-second
+			
+			.icon
+				width: 5rem
+				filter: drop-shadow(0 0 2px rgba(0, 0, 0, .5))
+
+	@media screen and (max-width: 600px)
+		#sobre div
+			flex-direction: column
+
+		#conhecimentos .grid-container
+			grid-template-columns: 1fr
+			grid-template-rows: 1fr 1fr
+
+	@keyframes spin
+		0%
+			transform: rotate(0)
+		100%
+			transform: rotate(360deg)
+</style>
