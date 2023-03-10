@@ -123,7 +123,12 @@ const { title } = Astro.props;
 		main
 			height: calc(100dvh - 1rem - 100px) !important
 			margin-left: 1rem !important
-			// margin-bottom: 0 !important
 			grid-column: 1
 			grid-row: 1
+
+			&::before
+				width: 20rem !important
+
+			&:after
+				height: 15rem !important
 </style>
