@@ -41,9 +41,10 @@ import { Icon } from 'astro-icon';
         background-color: $c-primary
         color: $c-text
         border-radius: 1rem
-        height: calc(100vh - 2rem)
-        width: 100px
+        width: 1fr
+        height: 1fr
         margin: 1rem
+        margin-right: 0
         box-shadow: 0 0 5px rgba(0, 0, 0, .3)
         transition: ease-in .2s
         z-index: 999
@@ -88,16 +89,16 @@ import { Icon } from 'astro-icon';
                     transition: transform .3s
 
         .icon
-            width: 3rem
+            width: 2em
             color: $c-text
 
     @media screen and (max-width: 600px)
         nav
             position: relative
-            height: 100px
-            width: calc(100% - 2rem)
             top: none
             bottom: 1rem !important
+            margin-right: 1rem !important
+            // margin-bottom: 0 !important
             grid-column: 1
             grid-row: 2
 

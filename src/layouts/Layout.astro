@@ -41,6 +41,7 @@ const { title } = Astro.props;
 	body
 		display: grid
 		grid-template-columns: 100px 1fr
+		grid-template-rows: 100dvh
 		gap: 1rem
 		font-family: sans-serif
 		font-size: 1.2em
@@ -53,8 +54,8 @@ const { title } = Astro.props;
 			grid-template-rows: 1fr
 			position: relative
 			margin: 1rem
-			max-height: calc(100dvh - 2rem)
-			height: 100%
+			margin-left: 0
+			height: 1fr
 			border-radius: 1rem
 			overflow: hidden
 			text-align: center
@@ -120,7 +121,9 @@ const { title } = Astro.props;
 			gap: 0
 
 		main
-			height: calc(100dvh - 3rem - 100px) !important
+			height: calc(100dvh - 1rem - 100px) !important
+			margin-left: 1rem !important
+			// margin-bottom: 0 !important
 			grid-column: 1
 			grid-row: 1
 </style>
