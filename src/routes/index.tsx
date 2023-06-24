@@ -1,19 +1,15 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 
-import Hero from '~/components/starter/hero/hero';
-import Navbar from '~/components/starter/navbar/navbar';
-import About from '~/components/starter/about/about';
+// import Hero from '~/components/starter/hero/hero';
+// import Navbar from '~/components/starter/navbar/navbar';
+// import About from '~/components/starter/about/about';
 
 import styles from './index.module.css';
 
 export default component$(() => {
   return (
     <>
-      <Hero />
-      <Navbar />
-      <About />
-
       <div class={styles.sectionContainer}>
         <section id="about" class={styles.section}>
           <h1>Sobre Mim</h1>

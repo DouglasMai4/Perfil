@@ -1,6 +1,12 @@
-import { component$, Slot, useStyles$ } from '@builder.io/qwik';
+import { component$, Slot } from '@builder.io/qwik';
 import { routeLoader$ } from '@builder.io/qwik-city';
 import type { RequestHandler } from '@builder.io/qwik-city';
+
+import Hero from '~/components/starter/hero/hero';
+import Navbar from '~/components/starter/navbar/navbar';
+import About from '~/components/starter/about/about';
+
+import styles from './layout.module.css';
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -22,9 +28,16 @@ export const useServerTimeLoader = routeLoader$(() => {
 export default component$(() => {
   return (
     <>
-      <main>
-        <Slot />
-      </main>
+      <Hero />
+      <Navbar />
+
+      <div class={styles.flex}>
+        <About />
+
+        <main class={styles.main}>
+          <Slot />
+        </main>
+      </div>
     </>
   );
 });
