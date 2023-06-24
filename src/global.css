@@ -18,6 +18,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
+::selection {
+  background-color: var(--c-secondary);
+  color: var(--bg-color)
+}
+
 body {
   font-size: 1.6rem;
   background-color: var(--bg-color);

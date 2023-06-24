@@ -1,0 +1,7 @@
+@media screen and (min-width: 950px) {
+  .flex {
+    display: grid;
+    grid-template-columns: 30rem 1fr;
+    grid-template-rows: 1fr;
+  }
+}
