@@ -1,7 +1,7 @@
 import { component$, useSignal } from '@builder.io/qwik';
-import { InFastArrowDown } from "@qwikest/icons/iconoir";
+import { InFastArrowDown } from '@qwikest/icons/iconoir';
 
-import styles from './hero.module.css';
+import styles from './hero.module.scss';
 
 export default component$(() => {
   const words = useSignal(['Desenvolvedor WEB!']);
@@ -13,13 +13,12 @@ export default component$(() => {
         Olá! Me chamo <span>Douglas Maia</span>
       </h1>
       <h2>
-        Sou um: <span>
-          {words.value[actualIndex.value]} 
-        </span>
+        Sou um: <span>{words.value[actualIndex.value]}</span>
       </h2>
 
-      <InFastArrowDown class={styles.icon} />
+      <a href='#about' class={styles.icon}>
+        <InFastArrowDown />
+      </a>
     </div>
   );
 });
-
