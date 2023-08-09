@@ -1,3 +1,11 @@
+@import '../assets/colors.scss';
+
+.main {
+  background-color: $bg-color-s;
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+
 @media screen and (min-width: 950px) {
   .flex {
     display: grid;

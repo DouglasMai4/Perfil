@@ -1,0 +1,28 @@
+@import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap';
+@import './assets/colors.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: Poppins, sans-serif;
+}
+
+::selection {
+  background-color: $c-secondary;
+  color: $bg-color;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: $bg-color;
+  color: $c-text;
+}

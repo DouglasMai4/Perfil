@@ -1,13 +1,17 @@
 import { component$ } from '@builder.io/qwik';
-import styles from './about.module.css';
+import styles from './about.module.scss';
 
 export default component$(() => {
   return (
     <div class={styles.stick}>
       <aside class={styles.aside}>
-        <img src="https://github.com/DouglasMai4.png" alt="Douglas Maia" />
-        <h1>Douglas Maia</h1>
-        <h2>Desenvolvedor WEB - Full Stack</h2>
+        <div class={styles.imgContainer}>
+          <img src='https://github.com/DouglasMai4.png' alt='Douglas Maia' />
+          <div class={styles.textContainer}>
+            <h1>Douglas Maia</h1>
+            <h2>Desenvolvedor WEB - Full Stack</h2>
+          </div>
+        </div>
 
         <hr />
 
@@ -34,6 +38,5 @@ export default component$(() => {
         </ul>
       </aside>
     </div>
-  )
-})
-
+  );
+});
