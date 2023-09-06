@@ -1,4 +1,7 @@
 --- 
+import Hero from '../components/Hero.astro';
+import Navbar from '../components/Navbar.astro';
+
 interface Props {
 	title: string;
 }
@@ -17,9 +20,13 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+    <Hero />
+    <Navbar />
+
 		<slot />
 	</body>
 </html>
+
 <style is:global lang="scss">
 @import '../assets/colors.scss';
 @import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap';
