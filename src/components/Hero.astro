@@ -1,4 +1,22 @@
-@import '../../assets/colors.scss';
+---
+import { Icon } from 'astro-icon'
+---
+
+<div class="hero">
+  <h1>
+    Olá! Me chamo <span>Douglas Maia</span>
+  </h1>
+  <h2>
+    Sou um: <span>Desenvolvedor WEB</span>.
+  </h2>
+
+  <a href='#about'>
+    <Icon class="icon" pack="fa6-solid" name="angles-down" />
+  </a>
+</div>
+
+<style lang="scss">
+@import '../assets/colors.scss';
 
 .hero {
   position: relative;
@@ -34,3 +52,4 @@
     bottom: 1rem;
   }
 }
+</style>

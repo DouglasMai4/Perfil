@@ -1,4 +1,44 @@
-@import '../../assets/colors.scss';
+---
+---
+
+<div class="stick">
+  <aside class="aside">
+    <div class="img-container">
+      <img src="https://github.com/DouglasMai4.png" alt="Douglas Maia" />
+      <div class="text-container">
+        <h1>Douglas Maia</h1>
+        <h2>Desenvolvedor WEB - Full Stack</h2>
+      </div>
+    </div>
+
+    <hr />
+
+    <h3>Competencias</h3>
+
+    <h4>Hard Skills</h4>
+    <ul>
+      <li>HTML, CSS, JavaScript - Avançado</li>
+      <li>ReactJS, VueJS, NuxtJS, SvelteKit - Intermediário</li>
+      <li>NodeJS, Deno - Intermediário</li>
+      <li>Express - Intermediário</li>
+      <li>Python - Intermediário</li>
+      <li>Rust, C/C++ - Básico</li>
+      <li>Metodologias Ágeis - Kanban, Scrum</li>
+    </ul>
+
+    <h4>Soft Skills</h4>
+    <ul>
+      <li>Comunicação</li>
+      <li>Colaboração</li>
+      <li>Criatividade</li>
+      <li>Proatividade</li>
+      <li>Foco</li>
+    </ul>
+  </aside>
+</div>
+
+<style lang="scss">
+@import '../assets/colors.scss';
 
 .aside {
   display: flex;
@@ -7,7 +47,7 @@
   align-items: center;
   padding: 0.5rem;
   border-radius: 1rem;
-  margin: 0.5rem;
+  margin: 0 0 0.3rem 0.3rem;
   background-color: $bg-color-s;
 
   img {
@@ -42,8 +82,8 @@
 @media screen and (min-width: 950px) {
   .aside {
     position: sticky;
-    top: 1rem;
-    height: 97.5dvh;
+    top: 0.5rem;
+    height: 98dvh;
 
     ul {
       display: flex;
@@ -59,9 +99,8 @@
       }
     }
 
-    .imgContainer {
+    .img-container {
       display: inline-flex;
-      column-gap: 0.5rem;
       background-color: $bg-color;
       border-radius: 1rem;
       text-align: center;
@@ -72,6 +111,16 @@
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
       }
+
+      .text-container {
+        font-size: 0.9rem;
+        margin: auto;
+
+        h1 {
+          font-size: 1.2rem;
+        }
+      }
     }
   }
 }
+</style>
