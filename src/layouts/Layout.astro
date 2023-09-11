@@ -1,6 +1,8 @@
 --- 
 import Hero from '../components/Hero.astro';
 import Navbar from '../components/Navbar.astro';
+import About from '../components/About.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
 	title: string;
@@ -23,11 +25,13 @@ const { title } = Astro.props;
     <Hero />
     <Navbar />
 
-    <div class="flex"
-      <main>
-		    <slot />
-      </main>
+    <div class="flex">
+      <About />
+
+		  <slot />
     </div>
+
+    <Footer />
 	</body>
 </html>
 
@@ -57,5 +61,21 @@ html {
 body {
   background-color: $bg-color;
   color: $c-text;
+  text-align: center;
+  
+  hr {
+    width: calc(100% - 1rem);
+    height: 2px;
+    border: none;
+    margin-inline: auto;
+    background-image: linear-gradient(to right, $c-primary, $c-secondary);
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .flex {
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+  }
 }
 </style>
