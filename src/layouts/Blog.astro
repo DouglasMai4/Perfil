@@ -1,8 +1,5 @@
 --- 
-import Hero from '../components/Hero.astro';
-import Navbar from '../components/Navbar.astro';
-import About from '../components/About.astro';
-import Footer from '../components/Footer.astro';
+import SearchBar from '../components/SearchBar.astro';
 
 interface Props {
 	title: string;
@@ -22,16 +19,8 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-    <Hero />
-    <Navbar />
-
-    <div class="flex">
-      <About />
-
-		  <slot />
-    </div>
-
-    <Footer />
+    <SearchBar />
+    <slot />
 	</body>
 </html>
 
