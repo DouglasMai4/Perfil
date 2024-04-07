@@ -1,31 +1,32 @@
 ---
+import { Icon } from 'astro-icon'
 ---
 
 <nav class="nav">
   <ul>
     <li>
-      <a href='https://github.com/DouglasMai4' target='_blank'>
-        GitHub
+      <a href='https://github.com/DouglasMai4' target='_blank' title="GitHub">
+        <Icon class="icon" pack="ph" name="github-logo-fill" />
       </a>
     </li>
     <li>
-      <a href='https://linkedin.com/in/DouglasMai4' target='_blank'>
-        LinkedIn
+      <a href='https://linkedin.com/in/DouglasMai4' target='_blank' title="LinkedIn">
+        <Icon class="icon" pack="ph" name="linkedin-logo-fill" />
       </a>
     </li>
     <li>
-      <a href='https://instagram.com/douglasmai4_sun' target='_blank'>
-        Instagram
+      <a href='https://instagram.com/douglasmai4_sun' target='_blank' title="Instagram">
+        <Icon class="icon" pack="ph" name="instagram-logo-fill" />
       </a>
     </li>
     <li>
-      <a href='https://t.me/DouglasMai4' target='_blank'>
-        Telegram
+      <a href='https://t.me/DouglasMai4' target='_blank' title="Telegram">
+        <Icon class="icon" pack="ph" name="telegram-logo-fill" />
       </a>
     </li>
     <li>
-      <a href='mailto:douglasmai4@protonmail.com' target='_blank'>
-        Email
+      <a href='mailto:douglasmai4@protonmail.com' target='_blank' title="Email">
+        <Icon class="icon" pack="ph" name="envelope-simple-fill" />
       </a>
     </li>
   </ul>
@@ -61,6 +62,9 @@
     font-size: 0.8rem;
 
     li a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       color: $c-text;
       text-decoration: none;
       transition: color 0.3s ease;
@@ -68,6 +72,10 @@
       &:hover {
         color: $c-secondary;
       }
+    }
+
+    .icon {
+      width: 1.5rem;
     }
   }
 }

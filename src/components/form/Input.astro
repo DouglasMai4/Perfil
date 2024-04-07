@@ -1,0 +1,48 @@
+---
+import { Icon } from 'astro-icon';
+
+interface Props {
+	id: string;
+  type: string;
+  name: string;
+}
+
+const { id, type, name } = Astro.props;
+---
+<label for={ id }>
+  <Icon class="icon" pack="ph" name="magnifying-glass" />
+
+  <input
+    id={ id }
+    type={ type }
+    name={ name }
+  >
+</label>
+
+<style lang="scss">
+@import '../../assets/colors.scss';
+
+label {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  background-color: $bg-color;
+  border-radius: 1rem;
+  padding: 0.2rem;
+
+  .icon {
+    width: 1.5rem;
+    margin: auto;
+  }
+
+  input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: $c-text;
+    caret-color: $c-secondary;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+}
+</style>
