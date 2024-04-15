@@ -1,20 +1,17 @@
 {
-  "name": "",
+  "name": "verdant-venus",
   "type": "module",
-  "version": "2.0.0",
+  "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.0.3",
-    "astro-icon": "^0.8.1",
-    "typewriter-effect": "^2.21.0"
-  },
-  "devDependencies": {
-    "sass": "^1.66.1"
+    "astro": "^4.6.1",
+    "@astrojs/check": "^0.5.10",
+    "typescript": "^5.4.5"
   }
 }

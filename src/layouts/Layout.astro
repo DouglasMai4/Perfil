@@ -1,9 +1,4 @@
---- 
-import Hero from '../components/Hero.astro';
-import Navbar from '../components/Navbar.astro';
-import About from '../components/About.astro';
-import Footer from '../components/Footer.astro';
-
+---
 interface Props {
 	title: string;
 }
@@ -11,71 +6,46 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Site pessoal de Douglas Maia">
+		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
-    <Hero />
-    <Navbar />
-
-    <div class="flex">
-      <About />
-
-		  <slot />
-    </div>
-
-    <Footer />
+		<slot />
 	</body>
 </html>
-
-<style is:global lang="scss">
-@import '../assets/colors.scss';
-@import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap';
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  font-family: Poppins, sans-serif;
-}
-
-::selection {
-  background-color: $c-secondary;
-  color: $bg-color;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: $bg-color;
-  color: $c-text;
-  text-align: center;
-  
-  hr {
-    width: calc(100% - 1rem);
-    height: 2px;
-    border: none;
-    margin-inline: auto;
-    background-image: linear-gradient(to right, $c-primary, $c-secondary);
-  }
-}
-
-@media screen and (min-width: 950px) {
-  .flex {
-    display: grid;
-    grid-template-columns: 20rem 1fr;
-  }
-}
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
 </style>
