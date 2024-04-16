@@ -1,0 +1,98 @@
+---
+import { Image } from 'astro:assets'
+---
+
+<aside>
+    <div class="profile container">
+        <Image
+            src="https://github.com/DouglasMai4.png"
+            alt="Douglas Maia picture"
+            width={ 70 }
+            height={ 70 }
+        />
+
+        <div class="titles">
+            <h1>Douglas Maia</h1>
+            <h2>Desenvolvedor WEB Full-Stack</h2>
+        </div>
+    </div>
+
+    <div class="skills container">
+        <div class="soft-skills">
+            <h3>Soft Skills</h3>
+
+            <ul>
+                <li>Colaboração</li>
+                <li>Comunicação</li>
+                <li>Criatividade</li>
+                <li>Foco</li>
+                <li>Kanban</li>
+                <li>Proatividade</li>
+                <li>Scrum</li>
+            </ul>
+        </div>
+        <div class="hard-skills">
+            <h3>Hard Skills</h3>
+
+            <ul>
+                <li>HTML, CSS, JS</li>
+                <li>TypeScript</li>
+                <li>Node, Express</li>
+                <li>React, Vue</li>
+                <li>Sass, UI/UX</li>
+                <li>MySQL, MongoDB</li>
+                <li>Rust, Java, Python</li>
+            </ul>
+        </div>
+    </div>
+</aside>
+
+<style lang="scss">
+@import '../assets/colors.scss';
+
+aside {
+    position: sticky;
+    top: 0;
+    background-color: $bg-color-s;
+    padding: 0.5rem;
+    height: 100dvh;
+    box-shadow: 0 0 15px rgb(0 0 0 / 50%);
+
+    .container {
+        background-color: $bg-color;
+        padding: 0.5rem;
+        border-radius: 10px;
+        gap: 1rem;
+
+        ul {
+            list-style: none;
+        }
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+
+        img {
+            border-radius: 100%;
+        }
+
+        .titles {
+            font-size: 0.7rem;
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                color: $c-primary;
+            }
+        }
+    }
+
+    .skills {
+        margin-top: 0.5rem;
+        justify-content: space-between;
+    }
+}
+</style>

@@ -1,4 +1,7 @@
 ---
+import Hero from '../components/Hero.astro';
+import Sidebar from '../components/Sidebar.astro';
+
 interface Props {
 	title: string;
 }
@@ -17,7 +20,13 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<Hero />
+		<div class="container">
+			<div class="sidebar-container">
+				<Sidebar />
+			</div>
+			<slot />
+		</div>
 	</body>
 </html>
 <style is:global lang="scss">
@@ -37,5 +46,13 @@ const { title } = Astro.props;
 	body {
 		background-color: $bg-color;
 		color: $c-text;
+
+		.container {
+			display: flex;
+
+			.sidebar-container {
+				min-height: 100dvh;
+			}
+		}
 	}
 </style>
