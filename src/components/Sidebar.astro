@@ -31,6 +31,9 @@ import { Image } from 'astro:assets'
                 <li>Scrum</li>
             </ul>
         </div>
+
+        <hr class="vertical" />
+
         <div class="hard-skills">
             <h3>Hard Skills</h3>
 
@@ -44,6 +47,10 @@ import { Image } from 'astro:assets'
                 <li>Rust, Java, Python</li>
             </ul>
         </div>
+    </div>
+
+    <div class="contact container">
+
     </div>
 </aside>
 
@@ -63,6 +70,10 @@ aside {
         padding: 0.5rem;
         border-radius: 10px;
         gap: 1rem;
+
+        &:not(:first-child) {
+            margin-top: 0.5rem;
+        }
 
         ul {
             list-style: none;
@@ -91,7 +102,6 @@ aside {
     }
 
     .skills {
-        margin-top: 0.5rem;
         justify-content: space-between;
     }
 }
