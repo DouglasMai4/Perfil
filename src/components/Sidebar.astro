@@ -1,0 +1,196 @@
+---
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
+---
+
+<aside>
+    <div class="profile container">
+        <Image
+            src="https://github.com/DouglasMai4.png"
+            alt="Douglas Maia picture"
+            width={ 70 }
+            height={ 70 }
+        />
+
+        <div class="titles">
+            <h1>Douglas Maia</h1>
+            <h2>Desenvolvedor WEB</h2>
+        </div>
+    </div>
+
+    <div class="skills container">
+        <div class="soft-skills">
+            <h3>Soft Skills</h3>
+
+            <ul>
+                <li>Colaboração</li>
+                <li>Comunicação</li>
+                <li>Criatividade</li>
+                <li>Foco</li>
+                <li>Kanban</li>
+                <li>Proatividade</li>
+                <li>Scrum</li>
+            </ul>
+        </div>
+
+        <hr class="vertical" />
+
+        <div class="hard-skills">
+            <h3>Hard Skills</h3>
+
+            <ul>
+                <li>HTML, CSS, JS</li>
+                <li>TypeScript</li>
+                <li>Node, Express</li>
+                <li>React, Vue</li>
+                <li>Sass, UI/UX</li>
+                <li>MySQL, MongoDB</li>
+                <li>Rust, Java, Python</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="about container">
+        <h3>Sobre Mim</h3>
+
+        <hr />
+
+        <p>
+            Me chamo Douglas Maia, tenho 19 anos, onde 5 anos de minha vida eu me dediquei para à area de T.I. Especialmente em desenvolvimento WEB. Sempre fui estremamente apaixonado por técnologia, sempre estou em busca de me aperfoiçoar, melhorar, evoluir.
+        </p>
+    </div>
+
+    <div class="contact container">
+        <a href="https://github.com/DouglasMai4" target="_blank">
+            <Icon name="logos/github" class="icon" />
+        </a>
+        <a href="https://www.linkedin.com/in/douglasmai4/" target="_blank">
+            <Icon name="logos/linkedin" class="icon" />
+        </a>
+        <a href="https://instagram.com/douglasmaia_ti" target="_blank">
+            <Icon name="logos/instagram" class="icon" />
+        </a>
+        <a href="mailto:contato@douglasmaia.dev.br" target="_blank">
+            <Icon name="at" class="icon" />
+        </a>
+    </div>
+</aside>
+
+<style lang="scss">
+@import '../assets/colors.scss';
+
+aside {
+    position: sticky;
+    top: 0;
+    background-color: $bg-color-s;
+    padding: 0.5rem;
+    height: 100dvh;
+    max-height: 100dvh;
+    width: 20rem;
+    box-shadow: 0 0 15px rgb(0 0 0 / 50%);
+
+    .container {
+        background-color: $bg-color;
+        padding: 0.5rem;
+        border-radius: 10px;
+        gap: 1rem;
+
+        &:not(:first-child) {
+            margin-top: 0.5rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+
+        img {
+            border-radius: 100%;
+        }
+
+        .titles {
+            font-size: 0.7rem;
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 0.9rem;
+                color: $c-primary;
+            }
+        }
+    }
+
+    .skills {
+        justify-content: space-between;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .contact {
+        background-color: transparent;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 0;
+        gap: 1px;
+        border-radius: 10px;
+        background-color: $c-primary;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            background-color: $bg-color;
+            width: 100%;
+            color: $c-primary;
+            font-size: 1.5rem;
+            transition: background 300ms ease;
+
+            &:hover {
+                background-color: $bg-color-s;
+            }
+            
+            &:nth-child(1) {
+                border-top-left-radius: 10px;
+            }
+
+            &:nth-child(2) {
+                border-top-right-radius: 10px;
+            }
+
+            &:nth-child(3) {
+                border-bottom-left-radius: 10px;
+            }
+
+            &:nth-child(4) {
+                border-bottom-right-radius: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    aside {
+        width: 100%;
+        height: fit-content;
+        max-height: none;
+
+        .profile {
+            text-align: center
+        }
+
+        .skills {
+            flex-direction: row;
+        }
+    }
+}
+</style>

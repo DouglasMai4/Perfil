@@ -1,55 +1,25 @@
 ---
-import { Icon } from 'astro-icon';
 ---
 
-<div class="hero">
-  <h1>
-    Olá! Me chamo <span>Douglas Maia</span>
-  </h1>
-  <h2 id="typewriter">
-    Sou um: Desenvolvedor WEB.
-  </h2>
-
-  <a href='#about'>
-    <Icon class="icon" pack="ph" name="caret-double-down" />
-  </a>
+<div class="hero-container">
+    <h1>Olá, me chamo Douglas Maia</h1>
+    <h2>Sou um: <span>Desenvolvedor WEB.</span></h2>
 </div>
 
 <style lang="scss">
 @import '../assets/colors.scss';
 
-.hero {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100dvh;
-  text-align: center;
-  background-image: linear-gradient(45deg, $c-primary, $c-secondary);
-  color: $c-text;
-  text-shadow: 0 0 10px rgb(0 0 0 / 50%);
-}
-
-.icon {
-  position: absolute;
-  width: 2rem;
-  left: 50%;
-  bottom: 1rem;
-  color: $c-text;
-  transform: translateX(-50%);
-  animation: icon-jump 1s infinite;
-}
-
-@keyframes icon-jump {
-  0% {
-    bottom: 1rem;
-  }
-  50% {
-    bottom: 1.5rem;
-  }
-  100% {
-    bottom: 1rem;
-  }
+.hero-container {
+    background: linear-gradient(to right, $c-primary, $c-secondary);
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    h1, h2 {
+        // text-shadow: 0 0 15px rgb(0 0 0 / 50%);
+        color: $bg-color-s;
+    }
 }
 </style>
