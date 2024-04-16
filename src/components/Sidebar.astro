@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
 ---
 
 <aside>
@@ -13,7 +14,7 @@ import { Image } from 'astro:assets'
 
         <div class="titles">
             <h1>Douglas Maia</h1>
-            <h2>Desenvolvedor WEB Full-Stack</h2>
+            <h2>Desenvolvedor WEB</h2>
         </div>
     </div>
 
@@ -49,8 +50,29 @@ import { Image } from 'astro:assets'
         </div>
     </div>
 
-    <div class="contact container">
+    <div class="about container">
+        <h3>Sobre Mim</h3>
 
+        <hr />
+
+        <p>
+            Me chamo Douglas Maia, tenho 19 anos, onde 5 anos de minha vida eu me dediquei para à area de T.I. Especialmente em desenvolvimento WEB. Sempre fui estremamente apaixonado por técnologia, sempre estou em busca de me aperfoiçoar, melhorar, evoluir.
+        </p>
+    </div>
+
+    <div class="contact container">
+        <a href="https://github.com/DouglasMai4" target="_blank">
+            <Icon name="logos/github" class="icon" />
+        </a>
+        <a href="https://www.linkedin.com/in/douglasmai4/" target="_blank">
+            <Icon name="logos/linkedin" class="icon" />
+        </a>
+        <a href="https://instagram.com/douglasmaia_ti" target="_blank">
+            <Icon name="logos/instagram" class="icon" />
+        </a>
+        <a href="mailto:contato@douglasmaia.dev.br" target="_blank">
+            <Icon name="at" class="icon" />
+        </a>
     </div>
 </aside>
 
@@ -63,6 +85,8 @@ aside {
     background-color: $bg-color-s;
     padding: 0.5rem;
     height: 100dvh;
+    max-height: 100dvh;
+    max-width: 20rem;
     box-shadow: 0 0 15px rgb(0 0 0 / 50%);
 
     .container {
@@ -96,6 +120,7 @@ aside {
             }
 
             h2 {
+                font-size: 0.9rem;
                 color: $c-primary;
             }
         }
@@ -103,6 +128,53 @@ aside {
 
     .skills {
         justify-content: space-between;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .contact {
+        background-color: transparent;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 0;
+        gap: 1px;
+        border-radius: 10px;
+        background-color: $c-primary;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            background-color: $bg-color;
+            width: 100%;
+            color: $c-primary;
+            font-size: 1.5rem;
+            transition: background 300ms ease;
+
+            &:hover {
+                background-color: $bg-color-s;
+            }
+            
+            &:nth-child(1) {
+                border-top-left-radius: 10px;
+            }
+
+            &:nth-child(2) {
+                border-top-right-radius: 10px;
+            }
+
+            &:nth-child(3) {
+                border-bottom-left-radius: 10px;
+            }
+
+            &:nth-child(4) {
+                border-bottom-right-radius: 10px;
+            }
+        }
     }
 }
 </style>
